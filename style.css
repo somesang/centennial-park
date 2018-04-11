@@ -71,7 +71,7 @@ input.marker-label:focus {
 
 .control-panel {
   display: flex;
-  opacity: .1;
+  opacity: 1;
   background: rgba(255, 255, 255, 0.9);
   position: absolute;
   bottom: 0;
