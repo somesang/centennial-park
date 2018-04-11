@@ -1,0 +1,29 @@
+{
+  "name": "centennial-park-map",
+  "version": "1.0.0",
+  "description": "A map with draggable markers to organize events",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/style.scss style.css -w --output-style expanded",
+    "sass:expanded": "node-sass sass/style.scss style.css --output-style expanded",
+    "sass:compress": "node-sass sass/style.scss style.css --output-style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/somesang/centennial-park.git"
+  },
+  "keywords": [
+    "interact.js",
+    "jquery",
+    "font-awesome"
+  ],
+  "author": "Sang Kim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/somesang/centennial-park/issues"
+  },
+  "homepage": "https://github.com/somesang/centennial-park#readme",
+  "devDependencies": {
+    "node-sass": "^4.8.3"
+  }
+}

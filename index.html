@@ -4,39 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Centennial Park Map</title>
-    <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
     <script src="js/fontawesome-all.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+
   </head>
   <body>
-  <div class="main">
+    <div class="control-panel draggable">
 
-  <div class="draggable">
-    <i class="fa-3x fas fa-flag"></i>
-    <input type="text">
-  </div>
-  <div class="draggable">
-    <i class="fa-3x fas fa-flag"></i>
-    <input type="text">
-  </div>
-  <div class="draggable">
-    <i class="fa-3x fas fa-flag"></i>
-    <input type="text">
-  </div>
-  <div class="draggable">
-    <i class="fa-3x fas fa-flag"></i>
-    <input type="text">
-  </div>
-  <div class="draggable">
-    <i class="fa-3x fas fa-flag"></i>
-    <input type="text">
-  </div>
-  <div class="draggable">
-    <i class="fa-3x fas fa-flag"></i>
-    <input type="text">
-  </div>
+      <div class="control-panel__toggle"><i class="fas fa-cog"></i></div>
+      <div class="clicked">
+        <p class="control-panel__label">Click to Add</p>
+        <button class="add-marker add-map-marker"><i class="marker-map fas fa-map-marker-alt"></i></button>
+        <button class="add-marker add-flag"><i class="marker-flag fas fa-flag"></i></button>
+        <button class="add-marker add-person"><i class="marker-person fas fa-street-view"></i></button>
+      </div>
+      </div>
 
-  </div>
-  <script src="js/interact.js" type="text/javascript"></script>
+    <div class="main">
+
+      <div class="marker draggable">
+      </div>
+
+    </div>
+    <script src="js/interact.js" type="text/javascript"></script>
   <script src="js/app.js" type="text/javascript"></script>
   </body>
 </html>

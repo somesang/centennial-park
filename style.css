@@ -1,0 +1,142 @@
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+.draggable {
+  height: 50px;
+  width: 50px;
+  margin: 20px;
+  position: relative;
+}
+
+.main {
+  display: flex;
+  flex-wrap: no-wrap;
+  height: 100vh;
+  background-image: url("assets/centennial-park-map.jpg");
+  background-size: 100vw;
+  background-repeat: no-repeat;
+}
+
+.remove {
+  position: absolute;
+  top: 80px;
+  right: 16px;
+  color: crimson;
+  opacity: 0;
+  transition: .4s opacity ease-in;
+}
+
+.remove:hover {
+  opacity: 1;
+}
+
+.marker-label:focus + .remove {
+  opacity: 1;
+}
+
+.marker-label {
+  background: rgba(255, 255, 255, 0.1);
+  width: 120px;
+  position: absolute;
+  bottom: -30px;
+  font-size: 20px;
+  border-radius: 20px;
+  right: -33px;
+  border: 1px solid transparent;
+  transition: .3s background ease;
+  text-align: center;
+}
+
+.marker-person + .marker-label {
+  right: -38px;
+}
+
+.marker:hover .marker-label {
+  background: white;
+  overflow: visible;
+  outline: 0;
+}
+
+input.marker-label:focus {
+  background: white;
+  box-shadow: 1px 4px 20px -2px rgba(0, 0, 0, 0.2);
+  outline: 0;
+}
+
+.fas {
+  height: 50px;
+  font-size: 50px;
+}
+
+.control-panel {
+  display: flex;
+  opacity: .1;
+  background: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: initial;
+  width: initial;
+  transition: opacity .4s ease-out;
+  box-shadow: 2px 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.control-panel:hover {
+  opacity: 1;
+}
+
+.control-panel__label {
+  text-align: center;
+}
+
+.control-panel__toggle {
+  position: absolute;
+  bottom: -14px;
+  right: -14px;
+}
+
+.add-marker {
+  margin: 20px 10px;
+  padding: 10px;
+  background: rgba(128, 128, 128, 0.1);
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+  border: 0;
+  transition: .3s box-shadow background ease;
+}
+
+.add-marker:hover {
+  box-shadow: 1px 3px 6px -2px rgba(0, 0, 0, 0.3);
+}
+
+.add-marker i {
+  font-size: 40px;
+}
+
+button.add-marker {
+  border-radius: 4px;
+  outline: none;
+  transition: .2s background ease-out;
+}
+
+button.add-marker:active {
+  background: rgba(128, 128, 128, 0.2);
+  box-shadow: 1px 2px 4px -3px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.fa-cog {
+  color: #444;
+  font-size: 40px;
+  animation: rotate 10s linear infinite;
+}
+
+.add-marker {
+  font-size: 40px;
+  color: #333;
+}

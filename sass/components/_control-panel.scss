@@ -1,0 +1,59 @@
+.control-panel {
+  display: flex;
+  opacity: .1;
+  background: rgba(white, .9);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: initial;
+  width: initial;
+  transition: opacity .4s ease-out;
+  box-shadow: 2px 6px 20px rgba(black,.3);
+  &:hover {
+    opacity: 1;
+  }
+  &__label {
+    text-align: center;
+  }
+  &__toggle {
+    position: absolute;
+    bottom: -14px;
+    right: -14px;
+  }
+}
+.add-marker {
+  margin: 20px 10px;
+  padding: 10px;
+  background: rgba(grey, .1);
+  box-shadow: 1px 4px 10px rgba(black,.2);
+  border: 0;
+  transition: .3s box-shadow background ease;
+  &:hover {
+    box-shadow: 1px 3px 6px -2px rgba(black,.3);
+  }
+  i {
+    font-size: 40px;
+  }
+}
+button.add-marker {
+  border-radius: 4px;
+  outline: none;
+  transition: .2s background ease-out;
+  &:active {
+    background: rgba(grey, .2);
+    box-shadow: 1px 2px 4px -3px rgba(black,.4);
+  }
+
+}
+@keyframes rotate {
+  100% {transform: rotate(360deg);}
+}
+.fa-cog {
+  color: #444;
+  font-size: 40px;
+  animation: rotate 10s linear infinite;
+}
+.add-marker {
+  font-size: 40px; 
+  color: #333;
+}

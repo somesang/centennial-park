@@ -15,15 +15,6 @@ interact('.draggable')
     // call this function on every dragmove event
     onmove: dragMoveListener,
     // call this function on every dragend event
-    onend: function (event) {
-      var textEl = event.target.querySelector('p');
-
-      textEl && (textEl.textContent =
-        'moved a distance of '
-        + (Math.sqrt(Math.pow(event.pageX - event.x0, 2) +
-                     Math.pow(event.pageY - event.y0, 2) | 0))
-            .toFixed(2) + 'px');
-    }
   });
 
   function dragMoveListener (event) {
@@ -44,3 +35,31 @@ interact('.draggable')
 
   // this is used later in the resizing and gesture demos
   window.dragMoveListener = dragMoveListener;
+
+
+$('.add-map-marker').click(function() {
+  $('.marker:last').before(`<div class="draggable marker"><i class="fa-3x marker-map fas fa-map-marker-alt"></i><input class="marker-label" type="text" /><span class="remove"><i class="fa-2x fas fa-ban"></i></span></div>`);
+});
+
+$('.add-flag').click(function() {
+  $('.marker:last').before(`<div class="draggable marker"><i class="fa-3x marker-flag fas fa-flag"></i><input class="marker-label" type="text" /><span class="remove"><i class="fa-2x fas fa-ban"></i></span></div>`);
+});
+
+// Add person marker
+$('.add-person').click(function() {
+  $('.marker:last').before(`<div class="draggable marker"><i class="fa-3x marker-person fas fa-street-view"></i><input class="marker-label" type="text" /><span class="remove"><i class="fa-2x fas fa-ban"></i></span></div>`);
+});
+
+// Delete marker
+$('.main').on('click','.remove',function() {
+    $(this).parent().remove();
+});
+
+// Expand and collapse settings
+$(".control-panel__toggle").click(function () {
+    $target = $(this);
+    $content = $target.next();
+    $target.toggleClass('clicked');
+    $content.slideToggle(200, function() {
+    });
+});
