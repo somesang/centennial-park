@@ -37,11 +37,11 @@ interact('.draggable')
   window.dragMoveListener = dragMoveListener;
 
 $('.add-lamp').click(function() {
-  $('.marker:last').before(`<div class="draggable marker"><i class="fa marker-lamp fas fa-lightbulb"></i><input class="marker-label" type="text" /><span class="remove"><i class="fa-2x fas fa-ban"></i></span></div>`);
+  $('.marker:last').before(`<div class="draggable marker"><i class="fa marker-lamp fas fa-lightbulb"></i><span class="remove"><i class="fa-2x fas fa-ban"></i></span></div>`);
 });
 
 $('.add-power').click(function() {
-  $('.marker:last').before(`<div class="draggable marker"><i class="fa marker-power fas fa-plug"></i><input class="marker-label" type="text" /><span class="remove"><i class="fa-2x fas fa-ban"></i></span></div>`);
+  $('.marker:last').before(`<div class="draggable marker"><i class="fa marker-power fas fa-plug"></i><span class="remove"><i class="fa-2x fas fa-ban"></i></span></div>`);
 });
 
 $('.add-map-marker').click(function() {
