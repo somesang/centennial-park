@@ -9,6 +9,7 @@
   width: initial;
   transition: opacity .4s ease-out;
   box-shadow: 2px 6px 20px rgba(black,.3);
+  border-radius: 4px;
   &:hover {
     opacity: 1;
   }
