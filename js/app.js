@@ -36,6 +36,9 @@ interact('.draggable')
   // this is used later in the resizing and gesture demos
   window.dragMoveListener = dragMoveListener;
 
+$('.add-power').click(function() {
+  $('.marker:last').before(`<div class="draggable marker"><i class="fa-3x marker-power fas fa-power"></i><input class="marker-label" type="text" /><span class="remove"><i class="fa-2x fas fa-ban"></i></span></div>`);
+});
 
 $('.add-map-marker').click(function() {
   $('.marker:last').before(`<div class="draggable marker"><i class="fa-3x marker-map fas fa-map-marker-alt"></i><input class="marker-label" type="text" /><span class="remove"><i class="fa-2x fas fa-ban"></i></span></div>`);
